@@ -1,6 +1,26 @@
 .flex {
   display: flex;
 }
+.animation {
+  background-color: #22283A;
+  animation-name: fire;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes fire {
+  0% {
+    background-image: linear-gradient(to right, #F6F6F6, #5E6164, #454A59, #22283A, #23293B);
+  }
+  35% {
+    background-image: linear-gradient(to right, #454A59, #F6F6F6, #5E6164, #22283A, #23293B);
+  }
+  65% {
+    background-image: linear-gradient(to right, #454A59, #22283A, #F6F6F6, #5E6164, #23293B);
+  }
+  100% {
+    background-image: linear-gradient(to right, #454A59, #22283A, #23293B, #F6F6F6, #5E6164);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -210,6 +230,50 @@ nav .navi a {
   margin: 0 auto;
   display: flex;
 }
+.nav2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px dashed #F1F1F1;
+  align-content: space-around;
+}
+.nav2 h1 {
+  color: #F6F7F8;
+}
+.nav2 .logo {
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+.nav2 .navi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 25%;
+  padding-bottom: 1%;
+}
+@media screen and (max-width:500px) {
+  .nav2 .navi {
+    width: 90%;
+  }
+}
+.nav2 .navi a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #F6F7F8;
+}
+@media screen and (max-width:500px) {
+  .nav2 {
+    padding-bottom: 3%;
+  }
+}
+.mhead {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -219,6 +283,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.signinbg {
+  background-image: url(../img/PIA22564_hires.jpg);
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home .signh1 {
+  color: #F6F7F8;
 }
 .home .intro h2 {
   padding: 15px;
@@ -303,6 +376,10 @@ footer {
   height: 18%;
   border-radius: 8px;
 }
+.home .walk .walk-text .btn a {
+  text-decoration: none;
+  color: #F6F7F8;
+}
 @media screen and (max-width:500px) {
   .home .walk .walk-text .btn {
     width: 95%;
@@ -325,4 +402,64 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 2rem;
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */;
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 2rem;
+  background-color: #F6F6F6;
+  color: #22283A;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #22283A;
+  animation-name: fire;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  background-color: #454A59;
+  color: #F1F1F1;
+}
+/* Add a background color and some padding around the form */
+.sign {
+  font-size: 2rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #22283A;
+  opacity: 1;
+  padding: 20px;
+  color: #F1F1F1;
 }

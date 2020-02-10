@@ -34,13 +34,40 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Adaptive has breakpoints that change the layout at each point. While Adaptive works well for specific types of devices, it's less flexable and has it's own issues with resolving on unfavorable screens.
+
+Fully Responsive websites are designed to function on all devices by being fluid, which loads faster. However, more attention is placed on maintaining complete flexability on each device.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Mobile First: Focus on display on a small screen and then working your way up to larger resolutions.
+
+Desktop First: Focus on large display and adapting it for best view for a smaller resolution.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+font-size: 62.5% = 10px or 10 Pixels.
+
+This means when we use rem in units, it's relative to it's parent element. So 2rem at base would be 20 pixels if the parent element is html.
+
+If however:
+html = 62.5%
+text = 2rem (20px)
+span in text = 2rem (20px(parent rem)* 2 (child, and current rem) = 40px)
+
+
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing allows you to break things apart into several sections that culminate into one larger section. It's faster, you can focus on specific parts of the css so it's cleaner and easier to read and develop. Also, because you're using shorter strings to input multiple elements, when you reuse things using a variable or a mixin, it automatically inputs all the information into the main CSS file so you're not putting it all in yourself over and over.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+
+Best: Less is less work. It's more comfortable and reminds me of other programming languages I'm used to, such as C# and C++.
+
+Worst: Often Mixins I prefer to use within the less files, as opposed to putting them in their separate less file. I know this is bad practice, and I'm working on developing a better habit for it.
+
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
@@ -126,9 +153,9 @@ In your solution, it is essential that you follow best practices and produce cle
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-* [ ] Build a page of your choosing from the navigation items. Come up with content and images that fit the theme.
+* [X] Build a page of your choosing from the navigation items. Come up with content and images that fit the theme.
 
-* [ ] Introduce CSS animations to your site.
+* [X] Introduce CSS animations to your site.
 
 * [ ] Create a fixed navigation and add some opacity to the background
 

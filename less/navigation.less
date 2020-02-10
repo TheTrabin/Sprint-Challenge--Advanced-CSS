@@ -40,3 +40,46 @@ nav {
     .flex();
     
 }
+// Navigation code here
+.nav2 {
+    .flex();
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px dashed @sea-shell;
+    align-content: space-around;
+    h1 {
+        color: @porcelain;
+    }
+
+    .logo {
+        padding-top: 2%;
+        padding-bottom: 1%;
+        
+    }
+    .navi {
+        .flex();
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 25%;
+        padding-bottom: 1%;
+        @media @mobile {
+         width: 90%;   
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color:@porcelain;  
+        }
+    }
+    @media @mobile {
+     padding-bottom: 3%;   
+    }
+}
+
+.mhead {
+    .container();
+    .flex();
+    
+}
